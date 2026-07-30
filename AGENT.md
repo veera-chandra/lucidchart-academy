@@ -10,6 +10,7 @@ the brief that routine reads every time it runs.
   fixes (e.g. splitting an overloaded section).
 - `content/quiz.json` — fixing ambiguous questions/answers, adding at
   most one new question per run.
+- `MAINTENANCE_LOG.md` — append exactly one line per run (see below).
 
 ## Out of bounds — what it must not touch
 
@@ -31,13 +32,19 @@ the brief that routine reads every time it runs.
 3. Make small, targeted edits directly to the JSON files. Keep the
    existing tone and length — this is a light touch-up pass, not a
    rewrite.
-4. If nothing needs changing, make no edits and no commit.
-5. If edits were made, commit them with a message describing what
+4. Regardless of whether content needed changing, append exactly one line
+   to `MAINTENANCE_LOG.md` in the format:
+   `- 2026-07-30: <what you changed, or "no changes needed">`
+   (use the actual current UTC date). This is the one file you always
+   touch, every run — it's what makes each run's execution verifiable.
+5. If content edits were made, commit them with a message describing what
    changed and why (e.g. "Clarify connector labeling example in
    Lesson 4"). Never force-push or rewrite history.
-6. Push to `origin main`. GitHub Pages rebuilds from `main` automatically,
-   so a pushed commit here goes live on the public site with no further
-   action.
+6. Commit the `MAINTENANCE_LOG.md` line — either together with any content
+   edits in one commit, or on its own if nothing else changed (message
+   like "Maintenance check: no changes needed"). Then push to `origin
+   main`. GitHub Pages rebuilds from `main` automatically, so anything
+   pushed here goes live on the public site with no further action.
 
 ## Validation before committing
 
