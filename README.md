@@ -27,10 +27,15 @@ http://localhost:4173 — the app is static, but content is fetched via
 
 ## Autonomous content maintainer
 
-This repo has a scheduled Claude Code cloud routine (see `AGENT.md`) that runs
-weekly, independent of any local machine, reviewing `content/lessons.json` and
-`content/quiz.json` for clarity, accuracy, and gaps, and pushing small
-improvements straight to `main` — which goes live on Pages automatically. It
-intentionally only touches the `content/` directory and lesson-plan scope — it
-does not restructure the app or expand beyond "LucidChart basics" without
-being asked. Manage it at claude.ai/code/routines.
+This repo has an autonomous maintainer (brief in `AGENT.md`) that reviews
+`content/lessons.json` and `content/quiz.json` for clarity, accuracy, and
+gaps, and pushes small improvements straight to `main` — which goes live on
+Pages automatically. It intentionally only touches the `content/` directory,
+`MAINTENANCE_LOG.md`, and lesson-plan scope — it does not restructure the app
+or expand beyond "LucidChart basics" without being asked.
+
+Two mechanisms run this brief on a schedule: a cloud routine (currently
+unconfirmed — see `AGENT.md` for why) and a session-bound local cron job
+(confirmed working, but only lives as long as its Claude session, max 7
+days). See `AGENT.md` for the full, current status of both, and
+`MAINTENANCE_LOG.md` for a running record of what each pass actually did.

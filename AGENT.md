@@ -63,10 +63,25 @@ and is served publicly via GitHub Pages at
 https://veera-chandra.github.io/lucidchart-academy/ (rebuilds
 automatically on every push to `main`).
 
-A durable **cloud routine** (id `trig_014zeopvFaDks7M5fDRH6B8p`, named
-"LucidChart Academy content maintainer") runs this exact brief every
-Thursday at 9:12am America/Chicago, independent of any local machine or
-Claude session — it clones this repo fresh each run, follows this file,
-and pushes any edits straight to `main`, which goes live on Pages
-automatically. You can also trigger an off-schedule run any time from
-claude.ai/code/routines.
+Two mechanisms are wired up, with different confidence levels:
+
+- A **cloud routine** (id `trig_014zeopvFaDks7M5fDRH6B8p`) is scheduled
+  for every Thursday at 9:12am America/Chicago and clones this repo
+  fresh each run. Two manual test-fires produced no commit at all, even
+  when explicitly required to push at least a `MAINTENANCE_LOG.md`
+  line — strongly suggesting that cloud environment doesn't actually
+  have push credentials for this repo (a separate authorization step
+  from any local `gh auth login`, and possibly related to this
+  account's Claude Code Web feature being restricted by org policy).
+  It's left enabled since it's harmless and may start working if that
+  gets resolved, but don't assume it's running until you see it
+  actually land a commit.
+- A **session-bound local cron job** (via `CronCreate`, same schedule)
+  is the mechanism actually confirmed working: on 2026-07-30 it (well,
+  a manual run of this exact brief) reviewed both content files and
+  pushed a real commit (`c95d877`) that went live on Pages within
+  seconds. Its limitation is lifespan, not capability — it only runs
+  while its originating Claude session stays open, and auto-expires
+  after 7 days regardless. It needs to be re-created (ask Claude Code
+  to re-read this file and re-run the `CronCreate` call) whenever that
+  session ends.
