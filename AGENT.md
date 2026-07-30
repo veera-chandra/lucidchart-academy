@@ -45,3 +45,24 @@ the brief that routine reads every time it runs.
   saved progress).
 - `quiz.json` entries must each keep `answer` as a valid index into
   their own `options` array.
+
+## How this actually runs today
+
+There's no GitHub remote and no GitHub auth configured on this machine,
+so a durable cloud routine isn't wired up yet. What's in place instead:
+a `CronCreate` job (in the Claude Code session that built this project)
+firing every Thursday ~9:12am local, running this exact brief. That job
+is **session-scoped** — it stops if that Claude session ends, and
+auto-expires after 7 days regardless.
+
+To get real "runs forever, no human involved" automation, do one of:
+
+- Push this repo to a GitHub repo you control, then ask Claude Code to
+  set up a scheduled **cloud routine** (`/schedule`) pointed at it —
+  that runs independent of any local session.
+- Or install the `claude` CLI locally and wire this prompt into a
+  `launchd`/`cron` job on this Mac that invokes it weekly.
+
+Until either of those is set up, you can always trigger a maintenance
+pass on demand by asking Claude Code to "run the LucidChart Academy
+content maintainer" from this repo.
