@@ -35,6 +35,9 @@ the brief that routine reads every time it runs.
 5. If edits were made, commit them with a message describing what
    changed and why (e.g. "Clarify connector labeling example in
    Lesson 4"). Never force-push or rewrite history.
+6. Push to `origin main`. GitHub Pages rebuilds from `main` automatically,
+   so a pushed commit here goes live on the public site with no further
+   action.
 
 ## Validation before committing
 
@@ -48,21 +51,15 @@ the brief that routine reads every time it runs.
 
 ## How this actually runs today
 
-There's no GitHub remote and no GitHub auth configured on this machine,
-so a durable cloud routine isn't wired up yet. What's in place instead:
-a `CronCreate` job (in the Claude Code session that built this project)
-firing every Thursday ~9:12am local, running this exact brief. That job
-is **session-scoped** — it stops if that Claude session ends, and
-auto-expires after 7 days regardless.
+This repo lives at https://github.com/veera-chandra/lucidchart-academy
+and is served publicly via GitHub Pages at
+https://veera-chandra.github.io/lucidchart-academy/ (rebuilds
+automatically on every push to `main`).
 
-To get real "runs forever, no human involved" automation, do one of:
-
-- Push this repo to a GitHub repo you control, then ask Claude Code to
-  set up a scheduled **cloud routine** (`/schedule`) pointed at it —
-  that runs independent of any local session.
-- Or install the `claude` CLI locally and wire this prompt into a
-  `launchd`/`cron` job on this Mac that invokes it weekly.
-
-Until either of those is set up, you can always trigger a maintenance
-pass on demand by asking Claude Code to "run the LucidChart Academy
-content maintainer" from this repo.
+A durable **cloud routine** (id `trig_014zeopvFaDks7M5fDRH6B8p`, named
+"LucidChart Academy content maintainer") runs this exact brief every
+Thursday at 9:12am America/Chicago, independent of any local machine or
+Claude session — it clones this repo fresh each run, follows this file,
+and pushes any edits straight to `main`, which goes live on Pages
+automatically. You can also trigger an off-schedule run any time from
+claude.ai/code/routines.
