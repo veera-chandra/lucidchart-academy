@@ -1,0 +1,122 @@
+[
+  {
+    "id": "welcome",
+    "title": "Welcome to LucidChart",
+    "summary": "What LucidChart is and when to reach for it.",
+    "sections": [
+      {
+        "heading": "What is LucidChart?",
+        "body": "LucidChart is a web-based diagramming tool used to create flowcharts, org charts, wireframes, mind maps, and process diagrams. Teams use it to visualize workflows, document systems, and plan projects collaboratively in real time."
+      },
+      {
+        "heading": "Why diagrams matter",
+        "body": "A good diagram turns a paragraph of instructions into something you can understand in five seconds. LucidChart's job is to make building that diagram fast, so this course focuses on the handful of core moves you'll use constantly: adding shapes, connecting them, and arranging them into a clear flow."
+      },
+      {
+        "heading": "What you'll learn",
+        "body": "Over the next few lessons you'll tour the editor, place and style shapes, draw connectors between them, and then put it all together by building a basic flowchart yourself in an interactive practice canvas."
+      }
+    ]
+  },
+  {
+    "id": "interface-tour",
+    "title": "Touring the Interface",
+    "summary": "The four areas of the editor you'll use every session.",
+    "sections": [
+      {
+        "heading": "The Shape Panel (left side)",
+        "body": "This is your palette. It holds shape libraries — basic flowchart shapes, org chart shapes, network icons, and more. Search the shape panel by keyword when you need something specific, like 'database' or 'cloud'."
+      },
+      {
+        "heading": "The Canvas (center)",
+        "body": "The large open area where you build your diagram. You can pan by holding space and dragging, or zoom with your trackpad/scroll wheel. Everything you place here is positioned on an underlying grid to keep alignment clean."
+      },
+      {
+        "heading": "The Toolbar (top)",
+        "body": "Contains formatting controls — fill color, line style, font, and alignment tools — plus undo/redo and zoom controls. It updates contextually based on what you have selected."
+      },
+      {
+        "heading": "The Properties/Format Panel (right side)",
+        "body": "When you select a shape or connector, this panel shows its specific properties: exact size, position, line weight, arrow style, and any data fields attached to it."
+      },
+      {
+        "heading": "Try it",
+        "tip": "In the real app: click any empty area of the canvas first, then click a shape once in the left panel to drop it in the center. In this course's practice canvas (coming up in Lesson 4), the same click-to-place pattern works the same way."
+      }
+    ]
+  },
+  {
+    "id": "shapes",
+    "title": "Creating Shapes",
+    "summary": "The core shape types every flowchart uses.",
+    "sections": [
+      {
+        "heading": "The four shapes you'll use most",
+        "body": "Flowcharting has a small standard vocabulary: an oval/rounded rectangle marks Start or End points, a rectangle marks a Process or action step, a diamond marks a Decision with multiple paths out, and a parallelogram marks Input/Output. Learning to recognize these four covers most real-world diagrams."
+      },
+      {
+        "heading": "Placing a shape",
+        "body": "Drag a shape from the panel onto the canvas, or click a shape once and then click an empty spot on the canvas to drop it there. Once placed, drag its edges to resize, or double-click it to type a label directly onto it."
+      },
+      {
+        "heading": "Styling a shape",
+        "body": "With a shape selected, the toolbar lets you change fill color, border color/weight, and text formatting. Consistent styling (e.g. always green for 'Start', red for 'Stop') makes diagrams much faster to read at a glance."
+      },
+      {
+        "heading": "Try it",
+        "tip": "Head to Lesson 4's practice canvas whenever you're ready — you'll place a Start oval, a Process rectangle, a Decision diamond, and an End oval."
+      }
+    ]
+  },
+  {
+    "id": "connectors",
+    "title": "Connecting Shapes",
+    "summary": "Lines and arrows that turn separate shapes into a flow.",
+    "sections": [
+      {
+        "heading": "What a connector is",
+        "body": "A connector is the line (usually an arrow) that links two shapes and shows the direction the process flows. Without connectors, a canvas full of shapes is just a pile of boxes — connectors are what make it a chart."
+      },
+      {
+        "heading": "Drawing a connector",
+        "body": "Hover over the edge of a shape until small directional arrows appear, then click-and-drag from that edge to the shape you want to connect to. LucidChart will snap the connector into place and keep it attached even if you move either shape afterward."
+      },
+      {
+        "heading": "Labeling a connector",
+        "body": "Double-click a connector to add a label — this is essential coming out of a Decision diamond, where each outgoing line should be labeled with the condition it represents, e.g. 'Yes' or 'No'."
+      },
+      {
+        "heading": "Try it",
+        "tip": "In the practice canvas, you'll connect shapes by clicking one shape and then clicking the shape you want to connect it to — an arrow will be drawn automatically between them."
+      }
+    ]
+  },
+  {
+    "id": "flowchart",
+    "title": "Building a Basic Flowchart",
+    "summary": "Put it together in the interactive practice canvas.",
+    "practice": true,
+    "sections": [
+      {
+        "heading": "Your task",
+        "body": "Using the practice canvas below, build a minimal flowchart: one Start shape, one Process shape, one Decision shape, and one End shape — connected in a logical order with at least two connectors."
+      },
+      {
+        "heading": "How to use this canvas",
+        "body": "Click a shape button in the toolbox, then click anywhere on the canvas to place it. To connect two shapes, click 'Connect' mode, then click the first shape and then the second — an arrow will be drawn between them. Drag any placed shape to reposition it."
+      }
+    ]
+  },
+  {
+    "id": "recap",
+    "title": "Recap & Quiz",
+    "summary": "Check what stuck before you move on.",
+    "quiz": true,
+    "sections": [
+      {
+        "heading": "Nice work",
+        "body": "You've covered the interface, the core shapes, connectors, and built a basic flowchart. The quiz below checks the essentials — you can retake it anytime."
+      }
+    ]
+  }
+]

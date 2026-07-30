@@ -1,0 +1,9 @@
+{
+  "name": "lucidchart-academy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interactive portal that teaches LucidChart basics, with content kept up to date by a scheduled autonomous agent.",
+  "scripts": {
+    "start": "python3 -m http.server 4173"
+  }
+}

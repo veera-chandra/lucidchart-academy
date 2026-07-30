@@ -1,0 +1,37 @@
+[
+  {
+    "question": "Which shape conventionally marks the start or end of a flowchart?",
+    "options": ["Rectangle", "Oval / rounded rectangle", "Diamond", "Parallelogram"],
+    "answer": 1
+  },
+  {
+    "question": "A diamond shape in a flowchart typically represents:",
+    "options": ["A process or action step", "An input/output operation", "A decision with multiple paths", "The end of the flow"],
+    "answer": 2
+  },
+  {
+    "question": "What is the purpose of a connector?",
+    "options": [
+      "To change a shape's color",
+      "To link shapes and show the direction the process flows",
+      "To resize the canvas",
+      "To add a new shape library"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Why should you label the connectors coming out of a Decision diamond?",
+    "options": [
+      "It's required to save the diagram",
+      "It makes the connectors thicker",
+      "It clarifies which condition each outgoing path represents (e.g. Yes/No)",
+      "It changes the diamond's fill color"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Where do you find shape libraries (basic flowchart, org chart, network icons, etc.)?",
+    "options": ["The top toolbar", "The right-side properties panel", "The left-side shape panel", "The canvas footer"],
+    "answer": 2
+  }
+]
